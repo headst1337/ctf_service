@@ -1,0 +1,31 @@
+<style>
+   a { text-decoration: none; color: #ffffff }
+   body { padding-top: 100px; }
+   .form-control { width: 660px; }
+</style>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">nameCTF</a>
+        <form class="d-flex">
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn btn-danger' %>
+        </form>
+    </div>
+</nav>
+
+<body>
+    <main class="container">
+        <br><br><br>
+        <%= form_for :task, url: tasks_path do |f| %>
+            <% if @task.errors.any? %>
+                <% @task.errors.full_messages.each do |msg| %>
+                    <div class="alert alert-danger"><%= msg %></div>
+                <% end %>
+            <% end %>
+        <p><b>Title</b><br> <%= f.text_field(:title, {:class => 'form-control'}) %> </p>
+        <br>
+        <p><b>Text</b><br> <%= f.text_area(:body, {:class => 'form-control'}) %> </p>
+        <p> <%= f.submit({:class => 'btn btn-success'}) %> </p>
+        <% end %>
+    </main>
+</body>
