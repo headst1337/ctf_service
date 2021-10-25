@@ -8,9 +8,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    
     id = params[:id]
-    
     if Task.where(id: id).exists?
       @task = Task.find_by(id: id, owner: current_user.id)
       if not @task
