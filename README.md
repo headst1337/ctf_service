@@ -1,8 +1,10 @@
 # README
 Simple Rails application for CTF. Like a TODO list.
-
-FAQ:
 _______________________________
+FAQ:
+
+
+
  Q: How to install?
  
  A: Visit a google.com.
