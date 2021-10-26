@@ -16,14 +16,15 @@ _______________________________
 
 ### How to run:
 
-1. Download Ruby and Rails
-2. Run and copy the output 
+1. Run and copy the output 
 > $rake secret 
-3. Run
+2. Run
 > $export SECRET_KEY_BASE=output-of-rake-secret
+3. Run 
+>$RAILS_ENV=production rake db:create db:migrate db:seed
 4. Change production.rb file  
 >config.assets.compile = false to config.assets.compile = true
-5. To precompile your assets, 
+5. To precompile your assets 
 >$RAILS_ENV=production bundle exec rake assets:precompile
 6. Run
 > $RAILS_ENV=production rails s
