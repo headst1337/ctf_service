@@ -9,7 +9,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
                 <%= link_to "Delete", task_path, method: :delete, :class => "btn btn-outline-danger" %>
-                <%= link_to "Backup", backup_path(query: 'File.new("out.txt", "w")'),  :class => "btn btn-outline-warning" %>              
+                <%= link_to "Backup", backup_path(filename: '> backup.txt'),  :class => "btn btn-outline-warning" %>              
             </li>
         </ul>
         <form class="d-flex">

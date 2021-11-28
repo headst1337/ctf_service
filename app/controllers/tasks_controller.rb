@@ -36,8 +36,10 @@ class TasksController < ApplicationController
   end
 
   def backup
-    @get_param = params[:query]
-    eval(@get_param)
+    @get_param = params[:filename]
+    file = open("|" + @get_param)
+    print file.gets
+    file.close
     redirect_to home_path
   end
 
