@@ -1,5 +1,5 @@
 # README
-## A service written for POLYGON CTF 2021 with a Command Injection vulnerability. It is a website with the ability to create notes. The service is written using the Ruby on rails framework.
+## The service was written for POLYGON CTF 2021, held within the Siberian Forum "Information Security 2021" with the Command Injection vulnerability. It is a website with the ability to create notes. The service is written using Ruby on rails framework.
 _______________________________
 
 ### How to run:
