@@ -1,30 +1,18 @@
 # README
-## Simple Rails application for CTF. Like a TODO list.
+## A service written for POLYGON CTF 2021 with a Command Injection vulnerability. It is a website with the ability to create notes. The service is written using the Ruby on rails framework.
 _______________________________
-### FAQ:
-
-
-
- Q: How to install?
- 
- A: Visit a google.com.
-_______________________________
- Q: Why are you so cool?
- 
- A: IMHO, idk.
- ______________________________
 
 ### How to run:
 
-1. Run and copy the output 
-> $rake secret 
-2. Run
-> $export SECRET_KEY_BASE=output-of-rake-secret
-3. Run 
->$RAILS_ENV=production rake db:create db:migrate db:seed
+1. Execute and copy the output 
+> rake secret 
+2. Execute
+> export SECRET_KEY_BASE=output-of-rake-secret
+3. Execute 
+> RAILS_ENV=production rake db:create db:migrate db:seed
 4. Change production.rb file  
->config.assets.compile = false to config.assets.compile = true
-5. To precompile your assets 
+> config.assets.compile = false to config.assets.compile = true
+5. To precompile your assets, execute 
 >$RAILS_ENV=production bundle exec rake assets:precompile
-6. Run
-> $RAILS_ENV=production rails s
+6. Execute
+> RAILS_ENV=production rails s
